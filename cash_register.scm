@@ -7,7 +7,9 @@
 )
 
 (define (getValue total)
-    (print "Enter Value:")
+    (print "$" total)
+    (print "")
+    (display "Enter Value:")
     (let ((num (convertFloat (format "~a" (read)))))
         (cond ((equal? num 0) (quitProgram total))
         (else (getValue (+ total num)))
